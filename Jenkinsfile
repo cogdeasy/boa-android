@@ -1,4 +1,4 @@
-// Northbridge Mobile Engineering - retail Android pipeline.
+// BofA Mobile Engineering - retail Android pipeline.
 // Runs on the shared mobile agents (JDK 8 + Android SDK 30 pre-installed).
 pipeline {
     agent { label 'android-jdk8' }

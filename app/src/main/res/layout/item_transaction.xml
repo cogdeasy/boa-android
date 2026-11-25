@@ -15,7 +15,7 @@
         android:layout_toStartOf="@id/txn_amount"
         android:ellipsize="end"
         android:maxLines="1"
-        android:textColor="@color/nb_text_primary"
+        android:textColor="@color/boa_text_primary"
         android:textSize="15sp" />
 
     <TextView
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/txn_description"
         android:layout_marginTop="2dp"
-        android:textColor="@color/nb_text_secondary"
+        android:textColor="@color/boa_text_secondary"
         android:textSize="12sp" />
 
     <TextView
@@ -43,6 +43,6 @@
         android:layout_below="@id/txn_amount"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="2dp"
-        android:textColor="@color/nb_text_secondary"
+        android:textColor="@color/boa_text_secondary"
         android:textSize="12sp" />
 </RelativeLayout>

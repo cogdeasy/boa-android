@@ -18,17 +18,17 @@ Guidance for engineers and automation working in this repository.
 | Build offline APK | `./gradlew assembleMockDebug` |
 | Build live APK | `./gradlew assembleLiveDebug` |
 | Unit + Robolectric tests | `./gradlew testMockDebugUnitTest` |
-| Single test class | `./gradlew testMockDebugUnitTest --tests 'com.northbridge.mobile.util.MoneyTest'` |
+| Single test class | `./gradlew testMockDebugUnitTest --tests 'com.bofa.mobile.util.MoneyTest'` |
 | Coverage report | `./gradlew jacocoTestReport` -> `app/build/reports/jacoco/jacocoTestReport/` |
 | Lint | `./gradlew lintMockDebug` |
-| Install + launch | `./gradlew installMockDebug && adb shell am start -n com.northbridge.mobile.mock/com.northbridge.mobile.ui.login.LoginActivity` |
+| Install + launch | `./gradlew installMockDebug && adb shell am start -n com.bofa.mobile.mock/com.bofa.mobile.ui.login.LoginActivity` |
 | Screenshot | `adb exec-out screencap -p > screen.png` |
 
 Seeded login for the `mock` flavour: `dana.whitfield` / `Welcome1!`.
 
 ## Conventions
 
-- Package root `com.northbridge.mobile`. Screens live in `ui/<feature>/`, one Activity per screen.
+- Package root `com.bofa.mobile`. Screens live in `ui/<feature>/`, one Activity per screen.
 - New production code: Java 8 unless it is a pure utility or lives in `src/mock` (Kotlin). Do not
   use Java 9+ APIs or `java.time` (minSdk 23); use `BankDates`.
 - Money is `BigDecimal` via `Money.kt`; never `double`. Send amounts with `Money.toWire`.

@@ -1,6 +1,6 @@
-# Northbridge Mobile for Android
+# Bank of America Mobile Banking for Android
 
-Retail mobile banking app for Northbridge Federal Bank customers. Owned by Mobile Engineering (Digital Channels).
+Retail mobile banking app for Bank of America customers. Owned by Mobile Engineering (Digital Channels).
 
 Customers can:
 
@@ -43,8 +43,8 @@ access is rate limited from build agents.
 
 | Flavour | Backend | Application ID |
 |---|---|---|
-| `mock` | In-process stub of core-banking and the payments hub (`app/src/mock`). No network needed. | `com.northbridge.mobile.mock` |
-| `live` | Local core-banking on `10.0.2.2:8080` and payments hub on `10.0.2.2:8081` (the host machine as seen from the emulator). | `com.northbridge.mobile` |
+| `mock` | In-process stub of core-banking and the payments hub (`app/src/mock`). No network needed. | `com.bofa.mobile.mock` |
+| `live` | Local core-banking on `10.0.2.2:8080` and payments hub on `10.0.2.2:8081` (the host machine as seen from the emulator). | `com.bofa.mobile` |
 
 Build types: `debug`, `uat` (debuggable, `.uat` suffix, points at the same URLs as debug) and `release`.
 
@@ -54,7 +54,7 @@ Build types: `debug`, `uat` (debuggable, `.uat` suffix, points at the same URLs 
 emulator -avd <your-avd> &
 adb wait-for-device
 ./gradlew installMockDebug
-adb shell am start -n com.northbridge.mobile.mock/com.northbridge.mobile.ui.login.LoginActivity
+adb shell am start -n com.bofa.mobile.mock/com.bofa.mobile.ui.login.LoginActivity
 ```
 
 Sign in with a seeded customer from the core platform API contract:
@@ -65,7 +65,7 @@ Sign in with a seeded customer from the core platform API contract:
 | `marcus.oyelaran` | `Welcome1!` | 100000002 | Checking ********8218, Savings ********8226 |
 
 To run against the real services, start `core-banking` (:8080) and the payments hub (:8081) from the
-Northbridge Core Platform repository on the host, then `./gradlew installLiveDebug`.
+BofA Core Platform repository on the host, then `./gradlew installLiveDebug`.
 
 ## Architecture
 
@@ -92,7 +92,7 @@ with the contract's customers, accounts and payees; the `live` flavour adds noth
 
 ## How the app talks to core-banking
 
-The contract is `docs/API.md` in the Northbridge Core Platform repository.
+The contract is `docs/API.md` in the BofA Core Platform repository.
 
 - **Auth**: HTTP Basic against the core-banking user store on every request (`AuthInterceptor`).
   A `401` ends the session and returns the customer to the login screen. Customers (`CUSTOMER` role)
@@ -106,7 +106,7 @@ The contract is `docs/API.md` in the Northbridge Core Platform repository.
 - Money is sent and received as two-decimal strings (`"125.40"`), dates as `yyyy-MM-dd`, and account
   numbers are 12-digit DDAs that are masked to the last four digits in the UI.
 
-Every request also carries `X-NB-Client-Id`, `X-NB-Client-Key` and `X-NB-App-Version` for the API gateway.
+Every request also carries `X-BOA-Client-Id`, `X-BOA-Client-Key` and `X-BOA-App-Version` for the API gateway.
 
 ## Tests and coverage
 

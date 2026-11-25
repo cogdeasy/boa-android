@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
-        <item name="colorPrimary">@color/nb_navy</item>
-        <item name="colorPrimaryDark">@color/nb_navy_dark</item>
-        <item name="colorAccent">@color/nb_teal</item>
-        <item name="colorSecondary">@color/nb_teal</item>
-        <item name="android:windowBackground">@color/nb_background</item>
+        <item name="colorPrimary">@color/boa_navy</item>
+        <item name="colorPrimaryDark">@color/boa_navy_dark</item>
+        <item name="colorAccent">@color/boa_teal</item>
+        <item name="colorSecondary">@color/boa_teal</item>
+        <item name="android:windowBackground">@color/boa_background</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:windowBackground">@color/nb_navy</item>
+        <item name="android:windowBackground">@color/boa_navy</item>
     </style>
 
-    <style name="NbCard" parent="Widget.MaterialComponents.CardView">
+    <style name="BoaCard" parent="Widget.MaterialComponents.CardView">
         <item name="cardCornerRadius">8dp</item>
         <item name="cardElevation">2dp</item>
-        <item name="cardBackgroundColor">@color/nb_card</item>
+        <item name="cardBackgroundColor">@color/boa_card</item>
         <item name="contentPadding">16dp</item>
     </style>
 
-    <style name="NbSectionLabel">
+    <style name="BoaSectionLabel">
         <item name="android:textSize">12sp</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:letterSpacing">0.08</item>
-        <item name="android:textColor">@color/nb_text_secondary</item>
+        <item name="android:textColor">@color/boa_text_secondary</item>
     </style>
 
-    <style name="NbPrimaryButton" parent="Widget.MaterialComponents.Button">
+    <style name="BoaPrimaryButton" parent="Widget.MaterialComponents.Button">
         <item name="android:minHeight">52dp</item>
-        <item name="backgroundTint">@color/nb_teal</item>
+        <item name="backgroundTint">@color/boa_teal</item>
         <item name="android:textColor">#FFFFFF</item>
     </style>
 </resources>

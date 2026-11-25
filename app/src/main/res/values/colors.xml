@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="nb_navy">#0B2545</color>
-    <color name="nb_navy_dark">#071A33</color>
-    <color name="nb_teal">#13A89E</color>
-    <color name="nb_gold">#C9A227</color>
-    <color name="nb_background">#F3F5F8</color>
-    <color name="nb_card">#FFFFFF</color>
-    <color name="nb_text_primary">#1B2430</color>
-    <color name="nb_text_secondary">#5C6773</color>
-    <color name="nb_credit">#1B7F3B</color>
-    <color name="nb_debit">#1B2430</color>
-    <color name="nb_error">#B3261E</color>
-    <color name="nb_divider">#E1E5EA</color>
+    <color name="boa_navy">#0B2545</color>
+    <color name="boa_navy_dark">#071A33</color>
+    <color name="boa_teal">#13A89E</color>
+    <color name="boa_gold">#C9A227</color>
+    <color name="boa_background">#F3F5F8</color>
+    <color name="boa_card">#FFFFFF</color>
+    <color name="boa_text_primary">#1B2430</color>
+    <color name="boa_text_secondary">#5C6773</color>
+    <color name="boa_credit">#1B7F3B</color>
+    <color name="boa_debit">#1B2430</color>
+    <color name="boa_error">#B3261E</color>
+    <color name="boa_divider">#E1E5EA</color>
 </resources>

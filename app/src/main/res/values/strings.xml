@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Northbridge</string>
-    <string name="bank_name">Northbridge Federal Bank</string>
+    <string name="app_name">BofA</string>
+    <string name="bank_name">Bank of America</string>
     <string name="title_accounts">Accounts</string>
     <string name="title_activity">Activity</string>
     <string name="title_transfer">Transfer</string>
@@ -19,7 +19,7 @@
     <string name="login_error_invalid">The Online ID or passcode you entered is incorrect</string>
     <string name="login_footer">Member FDIC. Equal Housing Lender.</string>
 
-    <string name="error_network">We can\'t reach Northbridge right now. Check your connection and try again.</string>
+    <string name="error_network">We can\'t reach Bank of America right now. Check your connection and try again.</string>
     <string name="error_generic">Something went wrong. Please try again.</string>
     <string name="error_session_expired">Your session has ended. Please sign in again.</string>
 

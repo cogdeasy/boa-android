@@ -18,7 +18,7 @@
                 android:id="@+id/accounts_greeting"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/nb_text_primary"
+                android:textColor="@color/boa_text_primary"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -51,7 +51,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:textColor="@color/nb_gold"
+                    android:textColor="@color/boa_gold"
                     android:textSize="12sp" />
             </LinearLayout>
 
@@ -63,7 +63,7 @@
 
                 <Button
                     android:id="@+id/accounts_transfer"
-                    style="@style/NbPrimaryButton"
+                    style="@style/BoaPrimaryButton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="6dp"
@@ -72,7 +72,7 @@
 
                 <Button
                     android:id="@+id/accounts_pay"
-                    style="@style/NbPrimaryButton"
+                    style="@style/BoaPrimaryButton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
@@ -81,7 +81,7 @@
             </LinearLayout>
 
             <TextView
-                style="@style/NbSectionLabel"
+                style="@style/BoaSectionLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
@@ -99,7 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:textColor="@color/nb_error"
+                android:textColor="@color/boa_error"
                 android:visibility="gone" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

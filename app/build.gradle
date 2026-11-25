@@ -7,7 +7,7 @@ android {
     buildToolsVersion '30.0.3'
 
     defaultConfig {
-        applicationId 'com.northbridge.mobile'
+        applicationId 'com.bofa.mobile'
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 41207
@@ -15,8 +15,8 @@ android {
 
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
 
-        buildConfigField 'String', 'NB_CLIENT_ID', '"nb-retail-android"'
-        buildConfigField 'String', 'NB_CLIENT_KEY', '"a7f3c19e-52d4-4b8e-9d61-0c2f7e8b4a90"'
+        buildConfigField 'String', 'BOA_CLIENT_ID', '"boa-retail-android"'
+        buildConfigField 'String', 'BOA_CLIENT_KEY', '"a7f3c19e-52d4-4b8e-9d61-0c2f7e8b4a90"'
         buildConfigField 'boolean', 'ALLOW_INSECURE_TLS', 'false'
     }
 
@@ -43,8 +43,8 @@ android {
             dimension 'backend'
             applicationIdSuffix '.mock'
             versionNameSuffix '-mock'
-            buildConfigField 'String', 'CORE_BANKING_BASE_URL', '"https://core-banking.mock.northbridge.local/api/v1/"'
-            buildConfigField 'String', 'PAYMENTS_BASE_URL', '"https://payments.mock.northbridge.local/api/v1/payments/"'
+            buildConfigField 'String', 'CORE_BANKING_BASE_URL', '"https://core-banking.mock.bofa.com/api/v1/"'
+            buildConfigField 'String', 'PAYMENTS_BASE_URL', '"https://payments.mock.bofa.com/api/v1/payments/"'
             buildConfigField 'String', 'ENVIRONMENT_LABEL', '"Offline sandbox"'
         }
         live {

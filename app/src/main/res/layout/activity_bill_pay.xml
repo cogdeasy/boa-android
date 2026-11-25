@@ -10,10 +10,10 @@
         android:orientation="vertical"
         android:padding="@dimen/screen_padding">
 
-        <TextView style="@style/NbSectionLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bill_payee" />
+        <TextView style="@style/BoaSectionLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bill_payee" />
         <Spinner android:id="@+id/bill_payee" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginBottom="16dp" />
 
-        <TextView style="@style/NbSectionLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/transfer_from" />
+        <TextView style="@style/BoaSectionLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/transfer_from" />
         <Spinner android:id="@+id/bill_from" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginBottom="16dp" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -41,11 +41,11 @@
                 android:inputType="none" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView android:id="@+id/bill_error" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:textColor="@color/nb_error" android:visibility="gone" />
+        <TextView android:id="@+id/bill_error" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:textColor="@color/boa_error" android:visibility="gone" />
 
         <Button
             android:id="@+id/bill_submit"
-            style="@style/NbPrimaryButton"
+            style="@style/BoaPrimaryButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
