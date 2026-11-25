@@ -11,26 +11,31 @@
         android:orientation="vertical"
         android:padding="28dp">
 
-        <ImageView
-            android:layout_width="56dp"
-            android:layout_height="56dp"
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="48dp"
-            android:contentDescription="@null"
-            android:src="@drawable/ic_launcher" />
+            android:background="@drawable/bg_logo_card"
+            android:paddingStart="16dp"
+            android:paddingTop="18dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="18dp">
+
+            <ImageView
+                android:id="@+id/login_logo"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/bank_name"
+                android:scaleType="fitCenter"
+                android:src="@drawable/boa_logo" />
+        </FrameLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/bank_name"
-            android:textColor="#FFFFFF"
-            android:textSize="26sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="16dp"
             android:text="@string/login_tagline"
             android:textColor="#B8C4D6"
             android:textSize="15sp" />
