@@ -1,0 +1,30 @@
+// Top-level build file. Module configuration lives in app/build.gradle.
+buildscript {
+    ext {
+        kotlin_version = '1.4.32'
+        retrofit_version = '2.6.4'
+        okhttp_version = '3.12.12'
+        jacoco_version = '0.8.7'
+    }
+    repositories {
+        google()
+        maven { url 'https://maven-central.storage-download.googleapis.com/maven2' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        maven { url 'https://maven-central.storage-download.googleapis.com/maven2' }
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

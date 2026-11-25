@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ body { font-family: sans-serif; color: #1B2430; margin: 16px; }
+ h1 { color: #0B2545; font-size: 22px; }
+ h2 { font-size: 16px; margin-top: 24px; }
+ p { line-height: 1.45; }
+ .tel { color: #13A89E; font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>Help &amp; support</h1>
+<p>Call us 24/7 at <span class="tel">1-800-555-0142</span>.</p>
+<h2>Transfers between your accounts</h2>
+<p>Transfers made before 8:00 p.m. ET on a business day post the same day. Transfers after the cut-off post on the next business day.</p>
+<h2>Bill pay</h2>
+<p>Electronic payments usually arrive in 1-2 business days. Check payments can take up to 5 business days.</p>
+<h2>Send money</h2>
+<p>Only send money to people you know and trust. Payments sent to an enrolled email or mobile number usually arrive within minutes.</p>
+<p id="session"></p>
+<script>
+  if (window.NbBridge) {
+    document.getElementById('session').innerText = 'Signed in as ' + NbBridge.getDisplayName();
+  }
+</script>
+</body>
+</html>

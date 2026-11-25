@@ -1,0 +1,108 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply from: "$rootDir/gradle/jacoco.gradle"
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion '30.0.3'
+
+    defaultConfig {
+        applicationId 'com.northbridge.mobile'
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 41207
+        versionName '4.12.7'
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+
+        buildConfigField 'String', 'NB_CLIENT_ID', '"nb-retail-android"'
+        buildConfigField 'String', 'NB_CLIENT_KEY', '"a7f3c19e-52d4-4b8e-9d61-0c2f7e8b4a90"'
+        buildConfigField 'boolean', 'ALLOW_INSECURE_TLS', 'false'
+    }
+
+    buildTypes {
+        debug {
+            testCoverageEnabled false
+            buildConfigField 'boolean', 'ALLOW_INSECURE_TLS', 'true'
+        }
+        uat {
+            initWith debug
+            debuggable true
+            applicationIdSuffix '.uat'
+            matchingFallbacks = ['debug']
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions 'backend'
+    productFlavors {
+        mock {
+            dimension 'backend'
+            applicationIdSuffix '.mock'
+            versionNameSuffix '-mock'
+            buildConfigField 'String', 'CORE_BANKING_BASE_URL', '"https://core-banking.mock.northbridge.local/api/v1/"'
+            buildConfigField 'String', 'PAYMENTS_BASE_URL', '"https://payments.mock.northbridge.local/api/v1/payments/"'
+            buildConfigField 'String', 'ENVIRONMENT_LABEL', '"Offline sandbox"'
+        }
+        live {
+            dimension 'backend'
+            // 10.0.2.2 is the host loopback from the Android emulator.
+            buildConfigField 'String', 'CORE_BANKING_BASE_URL', '"http://10.0.2.2:8080/api/v1/"'
+            buildConfigField 'String', 'PAYMENTS_BASE_URL', '"http://10.0.2.2:8081/api/v1/payments/"'
+            buildConfigField 'String', 'ENVIRONMENT_LABEL', '"Local core-banking"'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            returnDefaultValues = true
+            all {
+                systemProperty 'robolectric.dependency.repo.url', 'https://maven-central.storage-download.googleapis.com/maven2'
+                jacoco {
+                    includeNoLocationClasses = true
+                    excludes = ['jdk.internal.*']
+                }
+            }
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.core:core:1.3.2'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.robolectric:robolectric:4.5.1'
+    testImplementation 'androidx.test:core:1.3.0'
+    testImplementation 'org.mockito:mockito-core:2.28.2'
+    testImplementation "com.squareup.okhttp3:mockwebserver:$okhttp_version"
+}

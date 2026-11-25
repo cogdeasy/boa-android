@@ -1,0 +1,29 @@
+apply plugin: 'jacoco'
+
+jacoco {
+    toolVersion = jacoco_version
+}
+
+def coverageExcludes = [
+        '**/R.class', '**/R$*.class', '**/BuildConfig.*', '**/Manifest*.*',
+        '**/*Test*.*', 'android/**/*.*', '**/databinding/**'
+]
+
+// Unit-test coverage for the offline (mock) debug variant, which is what CI runs.
+task jacocoTestReport(type: JacocoReport, dependsOn: 'testMockDebugUnitTest') {
+    group = 'Reporting'
+    description = 'JaCoCo coverage report for testMockDebugUnitTest.'
+
+    reports {
+        xml.enabled = true
+        html.enabled = true
+        csv.enabled = false
+    }
+
+    def javaClasses = fileTree(dir: "$buildDir/intermediates/javac/mockDebug/classes", excludes: coverageExcludes)
+    def kotlinClasses = fileTree(dir: "$buildDir/tmp/kotlin-classes/mockDebug", excludes: coverageExcludes)
+
+    classDirectories.from = files([javaClasses, kotlinClasses])
+    sourceDirectories.from = files(['src/main/java', 'src/mock/java'])
+    executionData.from = fileTree(dir: buildDir, includes: ['jacoco/testMockDebugUnitTest.exec'])
+}

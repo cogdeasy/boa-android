@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Northbridge</string>
+    <string name="bank_name">Northbridge Federal Bank</string>
+    <string name="title_accounts">Accounts</string>
+    <string name="title_activity">Activity</string>
+    <string name="title_transfer">Transfer</string>
+    <string name="title_payments">Pay &amp; Send</string>
+    <string name="title_bill_pay">Pay a bill</string>
+    <string name="title_send_money">Send money</string>
+    <string name="title_help">Help &amp; support</string>
+
+    <string name="login_username">Online ID</string>
+    <string name="login_password">Passcode</string>
+    <string name="login_remember">Save Online ID and passcode</string>
+    <string name="login_sign_in">Sign in</string>
+    <string name="login_tagline">Banking built around you</string>
+    <string name="login_error_required">Enter your Online ID and passcode</string>
+    <string name="login_error_invalid">The Online ID or passcode you entered is incorrect</string>
+    <string name="login_footer">Member FDIC. Equal Housing Lender.</string>
+
+    <string name="error_network">We can\'t reach Northbridge right now. Check your connection and try again.</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="error_session_expired">Your session has ended. Please sign in again.</string>
+
+    <string name="accounts_total">Total available</string>
+    <string name="accounts_section">Deposit accounts</string>
+    <string name="accounts_available">Available</string>
+    <string name="accounts_ledger">Ledger %1$s</string>
+    <string name="accounts_hold">%1$s on hold</string>
+    <string name="action_transfer">Transfer</string>
+    <string name="action_pay_send">Pay &amp; Send</string>
+    <string name="action_sign_out">Sign out</string>
+    <string name="action_help">Help</string>
+
+    <string name="activity_search_hint">Search transactions</string>
+    <string name="activity_empty">No transactions to show</string>
+    <string name="activity_load_more">Load more</string>
+    <string name="activity_search_results">%1$d results for \"%2$s\"</string>
+
+    <string name="transfer_from">From</string>
+    <string name="transfer_to">To</string>
+    <string name="transfer_amount">Amount</string>
+    <string name="transfer_memo">Memo (optional)</string>
+    <string name="transfer_review">Review transfer</string>
+    <string name="transfer_confirm_title">Confirm transfer</string>
+    <string name="transfer_confirm_body">Move %1$s from %2$s to %3$s?</string>
+    <string name="transfer_submit">Transfer now</string>
+    <string name="transfer_success_title">Transfer complete</string>
+    <string name="transfer_success_body">%1$s was moved. Confirmation %2$s.</string>
+    <string name="transfer_error_same">Choose two different accounts</string>
+    <string name="transfer_error_amount">Enter an amount greater than $0.00</string>
+
+    <string name="payments_pay_bill">Pay a bill</string>
+    <string name="payments_send_money">Send money</string>
+    <string name="payments_recent">Recent payments</string>
+    <string name="payments_empty">No recent payments</string>
+    <string name="bill_payee">Payee</string>
+    <string name="bill_send_on">Send on</string>
+    <string name="bill_submit">Schedule payment</string>
+    <string name="bill_success">Payment %1$s scheduled for %2$s</string>
+    <string name="p2p_recipient_email">Email</string>
+    <string name="p2p_recipient_phone">Mobile number</string>
+    <string name="p2p_recipient">Recipient</string>
+    <string name="p2p_submit">Send</string>
+    <string name="p2p_success">%1$s sent. Confirmation %2$s.</string>
+    <string name="p2p_error_recipient">Enter a valid email or mobile number</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+</resources>

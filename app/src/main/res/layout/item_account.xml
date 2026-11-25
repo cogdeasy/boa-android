@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/NbCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/account_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/nb_text_primary"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/account_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/account_name"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/nb_text_secondary"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/account_available"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/nb_text_primary"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/account_available_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/account_available"
+            android:layout_alignParentEnd="true"
+            android:text="@string/accounts_available"
+            android:textColor="@color/nb_text_secondary"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/account_ledger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/account_number"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/nb_text_secondary"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/account_hold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/account_number"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/nb_gold"
+            android:textSize="12sp" />
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
